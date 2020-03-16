@@ -16,7 +16,8 @@ def compress(fname):
 
 def compress_all(files):
     for file in files:
-        print('Compressing ', file + '...')
+        size = os.path.getsize(file)
+        print('Compressing', file + '. Original size:', str(size), 'bytes.')
         compress(file)
 
 
