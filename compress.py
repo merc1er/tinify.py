@@ -14,6 +14,11 @@ def compress(fname):
     source.to_file(fname)
 
 
+def compress_all(files):
+    for file in files:
+        print('Compressing ', file + '...')
+        compress(file)
+
+
 if __name__ == '__main__':
-    print('Compressing ', sys.argv[1] + '...')
-    compress(sys.argv[1])
+    compress_all(sys.argv[1:])
